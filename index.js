@@ -13,13 +13,41 @@ console.log(finals2014);
 
 //(a) Home Team name for 2014 world cup final
 
+const homeTeam = finals2014.map((home) => home['Home Team Name']);
+
+console.log(homeTeam);
+
 //(b) Away Team name for 2014 world cup final
+
+const awayTeam = finals2014.map((away) => away['Away Team Name']);
+
+console.log(awayTeam);
 
 //(c) Home Team goals for 2014 world cup final
 
+const homeGoals = finals2014.map((goals) => goals['Home Team Goals']);
+
+console.log(homeGoals);
+
 //(d) Away Team goals for 2014 world cup final
 
+const awayGoals = finals2014.map((goals) => goals['Away Team Goals']);
+
+console.log(awayGoals);
+
 //(e) Winner of 2014 world cup final */
+
+const winner = function (homeCB, awayCB, homeScoreCB, awayScoreCB) {
+	if (homeScoreCB === awayScoreCB) {
+		return 'Tie';
+	} else if (homeScoreCB > awayScoreCB) {
+		return `${homeCB} wins!`;
+	} else {
+		return `${awayCB} wins!`;
+	}
+};
+
+console.log(winner(homeTeam, awayTeam, homeGoals, awayGoals));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
