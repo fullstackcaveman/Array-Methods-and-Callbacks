@@ -75,9 +75,11 @@ function getYears(array, getFinalsCB) {
 	let data = getFinalsCB(array);
 	const years = [];
 
-	for (let i = 0; i < data.length; i++) {
-		years.push(data[i].Year);
-	}
+	data.map((year) => years.push(year.Year));
+
+	// for (let i = 0; i < data.length; i++) {
+	// 	years.push(data[i].Year);
+	// }
 
 	return years;
 }
